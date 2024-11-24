@@ -9,8 +9,8 @@ A brief description of your Django project. This repository is intended for use 
     - [Mac](#mac)
     - [Windows](#windows)
   - [Make Setup](#make)
-    - [Mac](#mac-1)
-    - [Windows](#windows-1)
+    - [Windows](#installing-make-on-windows)
+    - [Mac](#installing-make-on-macOS)
 - [Installation](#setting-up-the-application)
     - [Addition Commands](#additional-commands)
 
