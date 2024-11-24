@@ -8,16 +8,12 @@ A brief description of your Django project. This repository is intended for use 
   - [Docker Setup](#docker-setup)
     - [Mac](#mac)
     - [Windows](#windows)
-  - [Make Setup](#make-setup)
+  - [Make Setup](#make)
     - [Mac](#mac-1)
     - [Windows](#windows-1)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Available Make Commands](#available-make-commands)
-- [Authentication](#authentication)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+- [Installation](#setting-up-the-application)
+    - [Addition Commands](#additional-commands)
+
 
 ## Prerequisites
 
