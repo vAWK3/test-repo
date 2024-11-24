@@ -111,14 +111,14 @@ Once you have Docker and Make installed, follow these steps to set up the applic
 
    This command will start all the services defined in your `docker-compose.yml` file.
 
-   ```
+
 5. **Apply Migrations**
 
    Apply the migrations to the database:
 
    ```bash
    make migrate
-
+   ```
 6. **Accessing the Application**
 
    Once everything is up and running, you can access the application by navigating to `http://localhost:8000` in your web browser.
