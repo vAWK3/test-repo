@@ -85,6 +85,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
+DB_NAME = os.environ.get('DATABASE_NAME', "DATABASE_NAME_MISSING")
+DB_USER = os.environ.get('DATABASE_USER', "DATABASE_USER_MISSING")
+DB_PASSWORD = os.environ.get('DATABASE_PASSWORD', "DATABASE_PASSWORD_MISSING")
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -92,9 +95,9 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_db_name',
-        'USER': 'your_db_user',
-        'PASSWORD': 'your_db_password',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
         'HOST': 'app-db',
     }
 }

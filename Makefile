@@ -21,7 +21,7 @@ db-shell:
 up:
 	$(DOCKER_COMPOSE) up -d
 
-stop:
+down:
 	$(DOCKER_COMPOSE) down
 
 # Access the Django shell
