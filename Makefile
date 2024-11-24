@@ -15,6 +15,9 @@ migrate:
 	$(EXEC_DJANGO) python app/manage.py makemigrations
 	$(EXEC_DJANGO) python app/manage.py migrate
 
+db-shell:
+	$(EXEC_DJANGO) python app/manage.py dbshell
+
 up:
 	$(DOCKER_COMPOSE) up -d
 
