@@ -1,8 +1,10 @@
-                        #!/bin/bash
-    python manage.py makemigrations
-    python manage.py migrate
+#!/bin/bash
+# Run database migrations
+export DJANGO_SETTINGS_MODULE=app.settings
 
-    cd /app/app
-    export DJANGO_SETTINGS_MODULE=app.settings
-    gunicorn app.wsgi:application --bind 0.0.0.0:${PORT:-8000}
+python manage.py makemigrations
+python manage.py migrate
+
+cd /app/app
+gunicorn app.wsgi:application --bind 0.0.0.0:${PORT:-8000}
     

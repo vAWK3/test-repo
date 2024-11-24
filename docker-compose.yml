@@ -3,6 +3,7 @@
     services:
       db:
         image: postgres
+        container_name: app-db
         environment:
           - POSTGRES_DB=your_db_name
           - POSTGRES_USER=your_db_user
@@ -10,6 +11,8 @@
           - DATABASE_URL=${DATABASE_URL}
           - ENGINE=django.db.backends.postgresql
           - DJANGO_ENV=${DJANGO_ENV}
+          - SECRET_KEY=${SECRET_KEY}
+          - DEBUG=${DEBUG}
         ports:
           - "5432:5432"
 

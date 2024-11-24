@@ -12,10 +12,10 @@ build:
 	$(DOCKER_COMPOSE) build
 
 migrate:
-	$(EXEC_DJANGO) python manage.py makemigrations
-	$(EXEC_DJANGO) python manage.py migrate
+	$(EXEC_DJANGO) python app/manage.py makemigrations
+	$(EXEC_DJANGO) python app/manage.py migrate
 
-start:
+up:
 	$(DOCKER_COMPOSE) up -d
 
 stop:
