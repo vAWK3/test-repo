@@ -13,6 +13,7 @@ A brief description of your Django project. This repository is intended for use 
     - [Mac](#installing-make-on-macOS)
 - [Installation](#setting-up-the-application)
     - [Addition Commands](#additional-commands)
+- [Troubleshooting](#troubleshooting)
 
 
 ## Prerequisites
@@ -138,3 +139,39 @@ Once you have Docker and Make installed, follow these steps to set up the applic
   ```bash
   make shell
   ```
+
+### Troubleshooting
+
+#### No such file or directory: entrypoint.sh
+
+If you encounter the error `no such file or directory: entrypoint.sh` when running Docker commands, it may be due to incorrect line endings in the `entrypoint.sh` file.
+
+**Cause**: The `entrypoint.sh` file may have Windows-style line endings (CRLF) instead of Unix-style line endings (LF).
+
+**Solution**:
+
+1. **Check Line Endings**:
+   
+   - Open the `entrypoint.sh` file in a text editor that can display line endings (e.g., VS Code).
+   - Look at the bottom-right corner of the editor to see if it shows `CRLF` or `LF`.
+
+2. **Change Line Endings to LF**:
+
+   - **Using VS Code**:
+     1. Open `entrypoint.sh` in VS Code.
+     2. Click on the `CRLF` label in the status bar at the bottom-right.
+     3. Select `LF` from the dropdown menu.
+     4. Save the file.
+
+   - **Using Command Line**:
+     - If you have `dos2unix` installed, you can convert the line endings by running:
+       ```bash
+       dos2unix entrypoint.sh
+       ```
+
+3. **Rebuild Docker Containers**:
+   
+   After changing the line endings, rebuild your Docker containers to apply the changes:
+   ```bash
+   make build
+   make up
